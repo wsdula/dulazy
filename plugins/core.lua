@@ -7,16 +7,27 @@ return {
     },
     config = function()
       local wk = require("which-key")
-      wk.register({
-        ["<leader>b"] = { name = "[B]uffer", _ = "which_key_ignore" },
-        ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-        ["<leader>d"] = { name = "[D]ocument", _ = "which_key_ignore" },
-        ["<leader>g"] = { name = "[G]it", _ = "which_key_ignore" },
-        ["<leader>h"] = { name = "More git", _ = "which_key_ignore" },
-        ["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
-        ["<leader>s"] = { name = "[S]earch", _ = "which_key_ignore" },
-        ["<leader>x"] = { name = "Open Netrw", _ = "which_key_ignore" },
-        ["<leader>w"] = { name = "[W]orkspace", _ = "which_key_ignore" },
+      wk.add({
+        {
+          { "<leader>b",  group = "[B]uffer" },
+          { "<leader>b_", hidden = true },
+          { "<leader>c",  group = "[C]ode" },
+          { "<leader>c_", hidden = true },
+          { "<leader>d",  group = "[D]ocument" },
+          { "<leader>d_", hidden = true },
+          { "<leader>g",  group = "[G]it" },
+          { "<leader>g_", hidden = true },
+          { "<leader>h",  group = "More git" },
+          { "<leader>h_", hidden = true },
+          { "<leader>r",  group = "[R]ename" },
+          { "<leader>r_", hidden = true },
+          { "<leader>s",  group = "[S]earch" },
+          { "<leader>s_", hidden = true },
+          { "<leader>w",  group = "[W]orkspace" },
+          { "<leader>w_", hidden = true },
+          { "<leader>x",  group = "Open Netrw" },
+          { "<leader>x_", hidden = true },
+        }
       })
       wk.setup(opts)
     end,
