@@ -39,7 +39,7 @@ return {
         }),
         sources = cmp.config.sources({
           -- Copilot Source
-          { name = "copilot", group_index = 2 },
+          -- { name = "copilot", group_index = 2 },
           -- Other Sources
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- For luasnip users.
