@@ -29,7 +29,7 @@ return {
               desc = "LSP: " .. desc
             end
 
-            vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
+            vim.keymap.set("n", keys, func, { buffer = vim.api.nvim_get_current_buf(), desc = desc })
           end
 
           nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
@@ -55,7 +55,7 @@ return {
           end, "[W]orkspace [L]ist Folders")
 
           -- Create a command `:Format` local to the LSP buffer
-          vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+          vim.api.nvim_buf_create_user_command(vim.api.nvim_get_current_buf(), "Format", function(_)
             vim.lsp.buf.format()
           end, { desc = "Format current buffer with LSP" })
 
@@ -138,7 +138,7 @@ return {
           end,
           settings = {
             Lua = {},
-          },		
+          },
         },
       }
 
@@ -150,8 +150,8 @@ return {
 			capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 			-- Ensure the servers above are installed
-			local mason_lspconfig = require("mason-lspconfig")
-
+			-- local mason_lspconfig = require("mason-lspconfig")
+      --
 			-- mason_lspconfig.setup({
 			-- 	ensure_installed = vim.tbl_keys(servers),
 			-- })
