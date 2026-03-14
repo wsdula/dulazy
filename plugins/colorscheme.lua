@@ -8,10 +8,4 @@ return {
       vim.cmd.colorscheme("catppuccin")
     end,
   },
-  {
-    "craftzdog/solarized-osaka.nvim",
-    lazy = false,
-    priority = 999,
-    opts = {},
-  },
 }

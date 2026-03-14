@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("dulazy.plugins",{
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "solarized-osaka" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
